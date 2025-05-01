@@ -1,0 +1,13 @@
+ok - Criar repositório no GIT;
+ok - Organizar pasta no nosso PC e clonar;
+ok - Iniciar Gomod e gsoum (Apenas quando impoartar um arquivo);
+- src
+ |- Controller      - Entrada e validação de dados;
+ |- model           - Regras de negócio e objeto principal;  
+ |- view            - Gerenciamento de dados (publico/privado) e converters
+ |- Tests           - Testes de integração da aplicação; 
+ |- Configuration   - Pacote para conexões, arquivos de configuração, etc
+ |- main.go         - Iniciar aplicação
+ |.env              - Variáveis de configuração
+ |.gitgnore         - Remover arquivos inuteis ou criticos do Git (Exemplo: .env)
+
