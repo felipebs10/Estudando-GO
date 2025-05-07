@@ -5,13 +5,13 @@ import "net/http"
 type RestErr struct {
 	Message string   `json:"message"`
 	Err     string   `json:"error"`
-	Code    int      `json:"code"`  //Ele pede para deixar como int no vídeo, porque mais para frente ocorre um problema por causa do int64
-	Causes  []Causes `json:"causes` //Objeto cause
+	Code    int      `json:"code"`   //Ele pede para deixar como int no vídeo, porque mais para frente ocorre um problema por causa do int64
+	Causes  []Causes `json:"causes"` //Objeto cause
 }
 
 type Causes struct {
-	Field   string `json:"field`
-	Message string `json:"message`
+	Field   string `json:"field"`
+	Message string `json:"message"`
 }
 
 func (r *RestErr) Error() string {
@@ -55,20 +55,18 @@ func NewInternalServerError(message string) *RestErr {
 	}
 }
 
-
-func NewNotFoundError (message string) *RestErr {
+func NewNotFoundError(message string) *RestErr {
 	return &RestErr{
 		Message: message,
-		Err: 	 "not_found"
-		Code: 	 http.StatusNotFound,
+		Err:     "not_found",
+		Code:    http.StatusNotFound,
 	}
 }
 
-func NewForbiddenError(message string) * RestErr {
+func NewForbiddenError(message string) *RestErr {
 	return &RestErr{
 		Message: message,
-		Err:     "forbidden"
+		Err:     "forbidden",
 		Code:    http.StatusForbidden,
 	}
 }
-
