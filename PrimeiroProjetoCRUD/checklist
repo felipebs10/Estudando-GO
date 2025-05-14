@@ -1,3 +1,4 @@
+Checklist Inicial
 ok - Criar repositório no GIT;
 ok - Organizar pasta no nosso PC e clonar;
 ok - Iniciar Gomod e gsoum (Apenas quando impoartar um arquivo);
@@ -11,3 +12,20 @@ ok - Iniciar Gomod e gsoum (Apenas quando impoartar um arquivo);
  |.env              - Variáveis de configuração
  |.gitgnore         - Remover arquivos inuteis ou criticos do Git (Exemplo: .env)
 
+Checklist de Objetos
+ok - Criar pasta chamada model/request e model/response dentro do controller 
+para que possamos criar os objetos de entrada e saída da aplicação.
+ok - Dentro de request , criar um objeto com os seguintes campos:
+  Email string
+  Password string
+  Name string
+  Age int8
+
+ok - Dentro de response, criar um objeto com os seguintes campos:
+  ID String
+  Email String
+  Name String
+  Age int8
+ok - Adicionar propriedades de json em ambos os objetos para que seja possível
+converter de json para objeto e de objeto para json
+- Adicionar objeto request no ShouldBindJson dentro do nosso.
