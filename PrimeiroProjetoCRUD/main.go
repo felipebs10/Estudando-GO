@@ -3,12 +3,15 @@ package main
 import (
 	"log"
 
+	"github.com/felipebs10/Estudando-GO/tree/main/PrimeiroProjetoCRUD/src/configuration/logger"
 	"github.com/felipebs10/Estudando-GO/tree/main/PrimeiroProjetoCRUD/src/controller/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
 func main() {
+	//log.Println("Está começando") /*Exemplo mostrando como adicionar a mensagem no log*/
+	logger.Info("About to start application ou Começando a usar a aplicação.") /*Exemplo mostrando como aplicar a função criada para mais nível */
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env File")
